@@ -51,8 +51,8 @@ void inputmanual() {																//Fungsi untuk input manual
 
 	int step = way.BFS(maze);
 
-	if (step != -1) cout << "Shortest Path is " << step << endl;
-	else cout << "Shortest Path doesn't exist" << endl;
+	if (step != -1) cout << "Langkah terpendek sebanyak " << step << endl;
+	else cout << "Langkah terpendek tidak ada" << endl;
 
 	cout << endl;
 
@@ -64,7 +64,7 @@ void inputmanual() {																//Fungsi untuk input manual
 		{
 			if (maze.getMaze()[i][j] == 0) cout<<"#";
 			if (maze.getMaze()[i][j] == 2) cout << "!";
-			if (maze.getMaze()[i][j] == 1 && i != maze.getStart().x) cout << "-";
+			if (maze.getMaze()[i][j] == 1 && i != maze.getStart().x && i != maze.getFinish().x) cout << "-";
 			if (i == maze.getStart().x && j == maze.getStart().y) cout << "S";
 			if (i == maze.getFinish().x && j== maze.getFinish().y) cout << "D"; 
 		}
